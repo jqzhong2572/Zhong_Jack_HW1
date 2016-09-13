@@ -21,15 +21,69 @@ def translate(text): # the funtion itself
         output += eng_sw(i) + " " # add each word to the output
     return output
 
-'''try this
+'''try
 translate('merry christmas Lalala 123')
 '''
 
 
 # --------------------Question 2--------------------
+'''
+function char_freq() takes a string and builds a
+frequency listing of the characters contained in it and return a dictionary
+'''
+
+def char_freq(s):
+    dic = {} # create a dictionary
+    for i in s: 
+        if i in dic:
+            dic[i] += 1 # if key is already in dic, add 1 count
+        else: 
+            dic[i] = 1 # if key is not in dic, create it
+    return dic    
+    
+'''try
+char_freq('abcabczz')
+'''
 
 
 
+
+
+# --------------------Question 3--------------------
+'''
+encoder/decoder of ROT-13.
+'''
+
+key = {'a':'n', 'b':'o',
+'c':'p', 'd':'q', 'e':'r', 'f':'s', 'g':'t', 'h':'u', 'i':'v',
+'j':'w', 'k':'x', 'l':'y', 'm':'z', 'n':'a', 'o':'b', 'p':'c',
+'q':'d', 'r':'e', 's':'f', 't':'g', 'u':'h', 'v':'i', 'w':'j',
+'x':'k', 'y':'l', 'z':'m', 'A':'N', 'B':'O', 'C':'P', 'D':'Q',
+'E':'R', 'F':'S', 'G':'T', 'H':'U', 'I':'V', 'J':'W', 'K':'X',
+'L':'Y', 'M':'Z', 'N':'A', 'O':'B', 'P':'C', 'Q':'D', 'R':'E',
+'S':'F', 'T':'G', 'U':'H', 'V':'I', 'W':'J', 'X':'K', 'Y':'L',
+'Z':'M'}
+
+string = 'Pnrfne pvcure? V zhpu cersre Pnrfne fnynq!'
+output = '' 
+
+for i in string:
+    if i in key:
+        output += key[i] # if the character is in key, use decode
+    else:
+        output += i # if the character is not in key, return original
+    
+print (output)
+
+
+
+# --------------------Question 4--------------------
+
+
+# --------------------Question 5--------------------
+
+
+# --------------------Question 6--------------------
 
 
 
@@ -80,6 +134,16 @@ map_to_lengths_for (['words','adf','adfa','12'])
 map_to_lengths_map (['words','adf','adfa','12'])
 map_to_lengths_lists (['words','adf','adfa','12'])
 '''
+
+
+
+# --------------------Question 9--------------------
+
+# --------------------Question 10--------------------
+
+# --------------------Question 11--------------------
+
+# --------------------Question 12--------------------
 
 
 
