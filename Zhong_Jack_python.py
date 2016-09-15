@@ -371,6 +371,7 @@ print(translate(["merry","christmas","and","happy","new","year","123"]))
 ## use help(funtion) to get their usage
 
 # map------------------------------------------------
+
 def map1(func, iterables):
     '''
     function map() make an iterator that computes the function using arguments 
@@ -392,7 +393,8 @@ def map1(func, iterables):
 print(map1(lambda x: x + 1, [1,2,3,4,5,99])) # add 1 to all elements
  
  
-#filter----------------------------------------------   
+#filter----------------------------------------------  
+ 
 def filter1(function, iterable):
     '''
     Return an iterator yielding those items of iterable for which function(item)
@@ -434,7 +436,8 @@ print(filter1(lambda x: x=='a', 'adsfasdfczvaaaa.a')) # filter out a's
 print(filter1(lambda x: x>1, [-4,-3,-2,-1,0,1,2,3,4,5,6])) # elements >1 in list
 
 
-#-------------------------------------------------------------------
+#reduce----------------------------------------------
+
 def reduce1(function, sequence, initial=None):
     '''
     Apply a function of two arguments cumulatively to the items of a sequence,
@@ -468,20 +471,4 @@ print(reduce1(max, [-2,-1-0,1,2,]))
 print(reduce1(lambda x,y: x+y, [-2,-1-0,1,2,]))
 print(reduce1(max, [1,2,3], 4))
 print(reduce1(max,[],1))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
