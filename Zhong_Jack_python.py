@@ -1,5 +1,5 @@
 # --------------------Question 1--------------------
-        
+##Prof G - Good header docs!       
 def translate(english=[]):
     '''
     function translate() takes a list of English words and returns a list of
@@ -12,7 +12,7 @@ def translate(english=[]):
     The corresponding translation according to the dictionary in a list
     '''
     ## Take care of spaces, uppercases and words that are not in dictionary 
-    
+    ##Prof G - Nice way to handle case and unknown words!
     output = [] # initialize
     eng_sw = {"merry":"god","christmas":"jul","and":"och",
               "happy":"gott","new":"nytt","year":"år"} # define a dictionary 
@@ -24,7 +24,7 @@ def translate(english=[]):
     return output                            
 
 
-print(translate(['Merry', 'christmas', 'and', 'Lalala', '123']))
+print(translate(['Merry', 'christmas', 'AND', 'Lalala', '123']))
 
 
 
@@ -72,7 +72,7 @@ def decoder(string):
     result of Caesar cipher where the shift is 13
     '''
     ## Take care of non-characters
-    
+    ##Prof G - Can you shorten the key and still handle case?
     key = {'a':'n', 'b':'o',
            'c':'p', 'd':'q', 'e':'r', 'f':'s', 'g':'t', 'h':'u', 'i':'v',
            'j':'w', 'k':'x', 'l':'y', 'm':'z', 'n':'a', 'o':'b', 'p':'c',
@@ -99,6 +99,7 @@ print(decoder('Pnrfne pvcure? V zhpu cersre Pnrfne fnynq!'))
 # --------------------Question 4--------------------
 
 import re
+##Prof G - Nice implementation!
 def correct(string):
     '''
     function correct() takes a string and sees to it that 
@@ -125,7 +126,7 @@ def correct(string):
  
  
 print(correct("This is very       funny and cool.Indeed!"))
-print(correct("This is very       funny and cool.     Indeed!"))
+print(correct("This.   is very       funny and cool.     Indeed!"))
  
 
 
@@ -147,7 +148,7 @@ def make_3sg_form(verb):
     Return:
     the verb's third person singular form
     '''
-    
+    ##Prof G - How does it handle mixed case?
     if verb.endswith('y'):                             # if the verb ends in y
         return re.sub('y', 'ies', verb)                # substitute y for ies
     elif verb.endswith(('o','ch','s','sh','x','z')):   # if ends in those
@@ -159,14 +160,14 @@ def make_3sg_form(verb):
 print(make_3sg_form('try'))
 print(make_3sg_form('brush'))
 print(make_3sg_form('run'))
-print(make_3sg_form('fix'))
+print(make_3sg_form('FIX'))
 
 
 
 
 # --------------------Question 6--------------------
 
-import re  
+import re  ##Prof G - Only need to import once and then it was not used here.
 def make_ing_form(verb):
     '''
     function make_ing_form() is given a verb in infinitive form and returns its
@@ -352,7 +353,7 @@ def translate(words):
     Return:
     a list of Sswedish words in a list
     '''
-    
+    ##Prof G - How to handle mixed case?
     dic = {"merry":"god","christmas":"jul","and":"och","happy":"gott",
        "new":"nytt","year":"år"} # dictionary
     return list(map(lambda x: dic.get(x), words))
@@ -360,7 +361,7 @@ def translate(words):
         # then use map function to iterate and return as a list
 
 
-print(translate(["merry","christmas","and","happy","new","year","123"]))
+print(translate(["merry","christmas","AND","happy","new","year","123"]))
 
 
 
